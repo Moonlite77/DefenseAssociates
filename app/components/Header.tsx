@@ -19,7 +19,7 @@ const Header = () => {
         <div>Army Business Development Services</div>
       </div>
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-        <Link href="/">
+        <Link href="/" className="hidden md:block">
           <Image
             src="https://imagedelivery.net/_3BvaaU0nebybABLZIjMPA/284e2242-3a48-4faa-97b1-15e202f64700/public"
             alt="Defense Associates Logo"
@@ -28,8 +28,8 @@ const Header = () => {
             className="h-24 w-auto"
           />
         </Link>
-        <nav>
-          <ul className="flex space-x-6">
+        <nav className="w-full md:w-auto">
+          <ul className="flex justify-between md:justify-start md:space-x-6">
             <li>
               <Link href="/" className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300">
                 Home

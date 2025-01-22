@@ -42,7 +42,7 @@ export default function Insights() {
     <div className="container mx-auto px-4 py-12">
       <div className="flex items-center justify-center mb-8">
         <BookOpen size={48} className="text-[#AE1E23] mr-4" />
-        <h1 className="text-5xl font-bold text-black">Industry Insights</h1>
+        <h1 className="text-5xl font-bold text-white">Industry Insights</h1>
       </div>
 
       <div className="max-w-3xl mx-auto space-y-12">
@@ -50,7 +50,7 @@ export default function Insights() {
         <div>
           <div className="flex items-center mb-6">
             <FileText size={24} className="text-[#AE1E23] mr-2" />
-            <h2 className="text-3xl font-bold text-black">Featured Articles</h2>
+            <h2 className="text-3xl font-bold text-white">Featured Articles</h2>
           </div>
           <div className="bg-[#2A2A2A] rounded-lg shadow-lg p-8">
             {articles.map((article, index) => (
@@ -81,7 +81,7 @@ export default function Insights() {
         <div>
           <div className="flex items-center mb-6">
             <MessageSquare size={24} className="text-[#AE1E23] mr-2" />
-            <h2 className="text-3xl font-bold text-black">Recent Posts</h2>
+            <h2 className="text-3xl font-bold text-white">Recent Posts</h2>
           </div>
           <div className="bg-[#2A2A2A] rounded-lg shadow-lg p-8">
             {posts.map((post, index) => (
