@@ -5,11 +5,11 @@ import { Mail, Phone } from "lucide-react"
 const Header = () => {
   return (
     <header className="bg-[#1A1A1A]">
-      <div className="container mx-auto px-4 py-1 flex justify-between items-center text-[#E0E0E0] text-sm">
+      <div className="container mx-auto px-4 py-1 justify-between items-center text-[#E0E0E0] text-sm hidden md:flex">
         <div className="flex items-center space-x-4">
           <span className="flex items-center">
             <Mail size={16} className="mr-2" />
-            buck@defenseassociates.us
+            contact@defenseassociates.us
           </span>
           <span className="flex items-center">
             <Phone size={16} className="mr-2" />
