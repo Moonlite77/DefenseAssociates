@@ -2,16 +2,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone } from "lucide-react"
 
-interface HeaderProps {
-  show: boolean
-}
-
-const Header: React.FC<HeaderProps> = ({ show }) => {
-  if (!show) return null
-
+const Header = () => {
   return (
     <header className="bg-[#1A1A1A]">
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center text-[#E0E0E0] text-sm">
+      <div className="container mx-auto px-4 py-1 flex justify-between items-center text-[#E0E0E0] text-sm">
         <div className="flex items-center space-x-4">
           <span className="flex items-center">
             <Mail size={16} className="mr-2" />
@@ -24,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ show }) => {
         </div>
         <div>Army Business Development Services</div>
       </div>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/">
           <Image
             src="https://imagedelivery.net/_3BvaaU0nebybABLZIjMPA/284e2242-3a48-4faa-97b1-15e202f64700/public"

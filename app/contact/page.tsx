@@ -45,7 +45,7 @@ export default function Contact() {
           <label htmlFor="name" className="block mb-2">
             Name
           </label>
-          <Input id="name" {...register("name", { required: "Name is required" })} className="w-full" />
+          <Input id="name" {...register("name", { required: "Name is required" })} className="w-full text-white" />
           {errors.name && <p className="text-red-500 mt-1">{errors.name.message as string}</p>}
         </div>
         <div className="mb-4">
@@ -59,7 +59,7 @@ export default function Contact() {
               required: "Email is required",
               pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" },
             })}
-            className="w-full"
+            className="w-full text-white"
           />
           {errors.email && <p className="text-red-500 mt-1">{errors.email.message as string}</p>}
         </div>
@@ -70,7 +70,7 @@ export default function Contact() {
           <Textarea
             id="message"
             {...register("message", { required: "Message is required" })}
-            className="w-full"
+            className="w-full text-white"
             rows={5}
           />
           {errors.message && <p className="text-red-500 mt-1">{errors.message.message as string}</p>}
