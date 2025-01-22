@@ -3,10 +3,14 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, Menu } from "lucide-react"
+import { Mail, Phone, Menu, X } from "lucide-react"
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
 
   return (
     <header className="bg-[#1A1A1A]">
@@ -33,20 +37,48 @@ const Header = () => {
             className="h-24 w-auto"
           />
         </Link>
-        <button className="md:hidden text-[#AE1E23]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          <Menu size={24} />
+        <button
+          className="md:hidden text-[#AE1E23] z-50"
+          onClick={toggleMobileMenu}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        <nav className={`${mobileMenuOpen ? "block" : "hidden"} md:block w-full md:w-auto`}>
+        <nav
+          className={`
+          ${mobileMenuOpen ? "flex" : "hidden"} 
+          md:flex 
+          flex-col 
+          md:flex-row 
+          absolute 
+          md:relative 
+          top-0 
+          left-0 
+          right-0 
+          bg-[#1A1A1A] 
+          md:bg-transparent 
+          p-4 
+          md:p-0 
+          mt-16 
+          md:mt-0 
+          z-40
+        `}
+        >
           <ul className="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
             <li>
-              <Link href="/" className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300">
+              <Link
+                href="/"
+                className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300 block py-2 md:py-0"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Home
               </Link>
             </li>
             <li>
               <Link
                 href="/about"
-                className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300"
+                className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300 block py-2 md:py-0"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </Link>
@@ -54,7 +86,8 @@ const Header = () => {
             <li>
               <Link
                 href="/contact"
-                className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300"
+                className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300 block py-2 md:py-0"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
@@ -62,7 +95,8 @@ const Header = () => {
             <li>
               <Link
                 href="/insights"
-                className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300"
+                className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300 block py-2 md:py-0"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Insights
               </Link>
