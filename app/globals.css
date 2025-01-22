@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bauhaus BC";
+  src: url("/fonts/BauhausBC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #ae1e23;
+  --background-color: #1a1a1a; /* Matte black */
+}
+
+body {
+  font-family: "Bauhaus BC", sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in-out {
+  animation: fadeInOut 2s ease-in-out;
+}
+
