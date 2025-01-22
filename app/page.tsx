@@ -48,7 +48,7 @@ export default function Home() {
           <p className="text-lg leading-relaxed text-[#E0E0E0] italic">
             Defense Associates is a Service-Disabled, Veteran-Owned Small Business providing marketing and business
             development consulting services to technical firms in Huntsville, Alabama. We deliver responsive and
-            scalable solutions for marketing and business development support. We will custom tailor your technology
+            scalable solutions for business development support and marketing. We will custom tailor your technology
             solution to meet critical Army capabilities gaps. Use our expertise to enhance your solutions to Army and
             Department of Defense customers.
           </p>

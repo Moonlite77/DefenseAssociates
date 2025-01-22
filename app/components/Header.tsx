@@ -20,12 +20,8 @@ const Header = () => {
             <Mail size={16} className="mr-2" />
             contact@defenseassociates.us
           </span>
-          <span className="flex items-center">
-            <Phone size={16} className="mr-2" />
-            256-933-8773
-          </span>
         </div>
-        <div>Army Business Development Services</div>
+        <div>DoD Business Development Services</div>
       </div>
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" className="hidden md:block">
