@@ -1,8 +1,11 @@
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone } from "lucide-react"
+import { Mail, Phone, Menu } from "lucide-react"
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <header className="bg-[#1A1A1A]">
       <div className="container mx-auto px-4 py-1 justify-between items-center text-[#E0E0E0] text-sm hidden md:flex">
@@ -28,8 +31,11 @@ const Header = () => {
             className="h-24 w-auto"
           />
         </Link>
-        <nav className="w-full md:w-auto">
-          <ul className="flex justify-between md:justify-start md:space-x-6">
+        <button className="md:hidden text-[#AE1E23]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <Menu size={24} />
+        </button>
+        <nav className={`${mobileMenuOpen ? "block" : "hidden"} md:block w-full md:w-auto`}>
+          <ul className="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
             <li>
               <Link href="/" className="text-[#AE1E23] hover:text-[#E0E0E0] font-bold transition-colors duration-300">
                 Home
